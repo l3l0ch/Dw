@@ -1,11 +1,11 @@
 # Projeto de Desenvolvimento Web
 
-## Tema:
+:star2:## Tema:
 * Gerenciamento de recursos (Dns)
 
 ## Integrantes: 
 * Mateus Eduardo :boy:
-* Ramon Lucas :boy:
+* Ramon Lucas :man:
 * Júlio Cézar :boy:
 
 
