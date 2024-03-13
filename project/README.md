@@ -1,6 +1,6 @@
 # Projeto de Desenvolvimento Web
 
-:star2:## Tema:
+## Tema: :star2:
 * Gerenciamento de recursos (Dns)
 
 ## Integrantes: 
