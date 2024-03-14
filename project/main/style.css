@@ -1,0 +1,22 @@
+.titulo{
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .dark-theme {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .titulo {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .descricao {
+    text-align: center;
+  }
