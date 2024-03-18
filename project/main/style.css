@@ -1,17 +1,18 @@
-.titulo{
-    text-align: center;
-}
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
   }
   
   .dark-theme {
-    background-color: black;
+    background-color: #222;
     color: #fff;
-    
   }
+
+.monitor{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: aquamarine;
+}
   
   .titulo {
     text-align: center;
@@ -21,3 +22,37 @@ body {
   .descricao {
     text-align: center;
   }
+  
+  .fluent-emoji-flat--red-circle {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23f8312f' d='M30 16c0 7.732-6.268 14-14 14S2 23.732 2 16S8.268 2 16 2s14 6.268 14 14'/%3E%3C/svg%3E");
+  }
+
+  .fluent-emoji-flat--green-circle {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%2300d26a' d='M30 16c0 7.732-6.268 14-14 14S2 23.732 2 16S8.268 2 16 2s14 6.268 14 14'/%3E%3C/svg%3E");
+  }
+
+div.container{
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+
+.table{
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+
+.links{
+  text-decoration: none;
+  color: lime;
+}
