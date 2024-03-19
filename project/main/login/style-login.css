@@ -3,7 +3,7 @@ body {
     padding: 0;
    
     height: 100vh;
-    background: black;
+    background: #222;
     
   }
   #login .container #login-row #login-column #login-box {

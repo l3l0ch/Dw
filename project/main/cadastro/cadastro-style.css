@@ -1,5 +1,5 @@
 body{
-    background: black;
+    background: #222;
 }
 #login .container #login-row #login-column #login-box {
     margin-top: 120px;
@@ -10,4 +10,25 @@ body{
   }
 .form-group{
     text-align: left;
+}
+.nav-bar{
+    background-color: white;
+    
+}
+div.container{
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+.links{
+  text-decoration: none;
+  color: lime;
+}
+.nav-link{
+    text-decoration: none;
+    color: black;
+    margin-left: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav-link:hover{
+    background: aliceblue;
 }
