@@ -30,3 +30,25 @@ console.log(Infinity);
 console.log(typeof(12312321n));
 console.log(Number.MAX_SAFE_INTEGER)
 
+// listas
+console.log([1,2,3,4,5])
+console.log([1,'Alice',true,'alice@gmail.com'])
+
+// Json
+
+console.log({
+    id: 1,
+    Nome:'Alice',
+    status: true,
+    email: "alice@gmail.com"
+})
+json={
+    id: 1,
+    Nome:'Alice',
+    status: true,
+    email: "alice@gmail.com"
+}
+// os dados são acessados pelo identificador
+console.log(json["email"]);
+
+// tipos de dados, Map, set...
