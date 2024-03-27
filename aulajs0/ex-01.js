@@ -25,7 +25,6 @@ console.log((-2) ** (1/2));
 
 console.log(Infinity);
 
-
 // bigInt -> qualquer numero no final com n 
 console.log(typeof(12312321n));
 console.log(Number.MAX_SAFE_INTEGER)
