@@ -12,23 +12,24 @@ else if (number < 0){
 else{
     console.log('This number is negative or zero');
 }
-
+console.log("")
 //switch
 const value1 = 10;
 const value2 = 5;
-const operator = '+'; // +, -
+const operator = '-'; // +, -
 
 switch(operator){
     case '+':
-        console.log(value1 + value2)
+        console.log(value1 + value2);
         break
-    case '-':
+    case '+':
         console.log(value1 - value2);
         break
     default:
         console.log('This operator is invalid');
 
     }
+    console.log("")
 
 // while
 let flag = 0;
