@@ -16,7 +16,11 @@
     */
 
     // Conversão de números 
+
+    
     let n1 = 1545.5
+    // n1.toFixed(2).replace('.', ',') --> substitui onde tiver ponto (.) por (,)
+    document.write(n1.toFixed(2).replace('.', ','));
     document.write(`<strong>Real </strong>: ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br>`);
     document.write(`<strong>Dolar</strong>: ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})} <br>`);
     document.write(`<strong>euro:</strong> ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}`);
