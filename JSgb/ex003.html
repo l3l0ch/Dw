@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background: rgb(110, 108, 238);
+            color: white;
+            font: normal 20px Arial;
+        }
+        .conteudo_lista{
+            font-size: 18px;
+            color: rgb(228, 243, 186);
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <h2> O que é DOM?</h2>
+    <p>DOM é um acrônimo para documment Object Model que é um modelo de objetos para documentos, basicamente é um conjunto de objetos dentro do navegador que vai dar acesso aos componentes internos do website. O DOM está presente quando está rodando JavaScript dentro do navegador.</p>
+    <h2>Árvore dom</h2>
+    <p>
+        Basicamente a árvore DOM começa da raiz e essa raiz dentro  do nagevador é chamada de window, então tudo dentro do JavaScript está dentro de um objeto chamado window, a janela do navegador é um objeto DOM. Dentro do "window" tem vários outros objetos. 
+        <ul>
+            <li> location </li>
+                <ul>
+                    <li class="conteudo_lista">Esse objeto diz qual é a localização do site, qual é a url, <br>qual é a página atual, qual foi a página anterior</li>
+                </ul>
+            <li> document </li>
+                <ul>
+                    <li class="conteudo_lista">Esse objeto diz qual é o documento atual sendo utlizado. </li>
+                </ul>
+            <li> history  </li>
+                <ul>
+                <li class="conteudo_lista"> Vai guardando as localizações de movimentações dentro da página, de onde estava anteriormente na pagina e pra onde pode ir.
+                </li>
+                </ul>
+        </ul>
+        
+    </p>
+    <p> Aqui vai o resultado</p>
+    <p> Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg"> Clique em mim </div>
+
+
+    <script>
+        /* seleção de objetos
+        * Por marca
+        * por ID
+        * Por Nome
+        * Por Classe
+        * por Seletor
+        */
+
+        // pegando o primeiro paragrafo escrito no html
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write('Está escrito assim: ' + p1.innerText)
+        p1.style.color = 'blue'
+        // corpo.style.background = 'Black';
+        // window.alert(p1.innerHTML); ||  ||  ||   com  formatação
+        // window.alert(p1.innerText); pega o texto sem formatação
+        
+        /*
+        // selecionando ID 
+        var d = window.document.getElementById('msg');
+
+        d.style.background = 'black';
+        // d.innerText = 'Estou aguardando...' 
+        // window.document.getElementById('msg').innerText = 'olá'
+        */
+       // para acessar id utiliza #, se for classe utiliza o ponto (.)
+
+       var d = window.document.querySelector('div#msg');
+       d.style.color = 'blue';
+       d.style.background = 'white';
+
+
+    </script>
+</body>
+</html> 
