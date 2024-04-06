@@ -140,3 +140,16 @@ console.log(3 & 1);
 console.log(4 & 1);
 
 //x & 1 = impar
+
+/*
+
+// Operadores
+let idade = 17;
+
+// a variavel maior_idade vai ser receber a string maior ou menor,
+// caso o valor da variavel idade for maior que 18, assume o valor 'maior'
+// se não for maior assume o valor 'menor'
+maior_idade = idade >= 18 ? 'MAIOR' : 'MENOR'
+console.log(maior_idade);
+
+*/
