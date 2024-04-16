@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(6, 6, 34);
+    
+}
+.container{
+    display: inline-block;
+    width: 50%;
+    height: 200px;
+    width: 700px;
+    height: 200px;
+
+  }
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    float: right;
+    width: 700px;
+    height: 200px;
+
+}
+.logo{
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-left: 15px;
+    float: left;
+
+   
+}
+.navbar ul li {
+    display: inline;
+    
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    background: rgba(52, 52, 54, 0.526);
+    border-radius: 12px;
+}
+.navbar ul li a{
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: 1s;
+}
