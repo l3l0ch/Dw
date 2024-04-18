@@ -39,6 +39,12 @@
                   <header><h2>Cadastro</h2></header>
               <div>
 
+                    <label for="nome" class="label-visual"> Nome: </label><br>
+                    <input type="email" id="nome">   
+  
+              </div>    
+              <div>
+
                   <label for="mail" class="label-visual"> E-mail: </label><br>
                   <input type="email" id="mail">   
 
@@ -49,13 +55,15 @@
                       <input type="password" id="password" name="senha"><br>
                   </div>
               <div>
-                      <label for="password" class="label-visual">Confirmar Senha:</label><br>
-                      <input type="password" id="password" name="senha"><br>
+                      <label for="conf-password" class="label-visual">Confirmar Senha:</label><br>
+                      <input type="password" id="conf-password" name="senha"><br>
                       <input id=but type="button" value="Cadastrar" onclick="cadastrar()"> 
               </div>
             </div>     
           </section>
       </div>
     </form>
+
+    <script src="../functions.js"></script>
 </body>
 </html>

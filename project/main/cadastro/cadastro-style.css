@@ -29,6 +29,16 @@ section{
   background: rgb(255, 255, 255);
   
 }
+#nome{ 
+  border-radius: 4px;
+  width: 350px;
+  margin-top: 10px;
+  margin-left: 10px;
+  box-shadow: 2px 2px 5px rgba(4, 4, 4, 0.633);
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+}
 .label-visual{
   margin-left: 10px;
   font-weight: bold;
@@ -36,6 +46,15 @@ section{
   
 }
 #password{
+  margin-top: 12px;
+  border-radius: 4px;
+  width: 350px;
+  margin-top: 10px;
+  margin-left: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.633);
+  font-size: 20px;
+}
+#conf-password{
   margin-top: 12px;
   border-radius: 4px;
   width: 350px;
