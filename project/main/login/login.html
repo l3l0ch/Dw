@@ -1,53 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="style-login.css" rel="stylesheet">
 
 
+    /* Fonte */
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="/dw/project/main/fonts-google.css" rel="stylesheet">
 
 
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-
+    <title>Login</title>
 </head>
-<link href="./style-login.css" rel="stylesheet">
 <body>
-    <div id="login">
+   
+    <header class="logo">
+    
+        <a href="./login.html">LOGO</a>
+ 
+    </header>
+    <nav class="navbar">
         <div class="container">
-            <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12">
-                        <form id="login-form" class="form" action="" method="post">
-                            <h3 class="text-center text-info">Login</h3>
-                            <div class="form-group">
-                                <label for="username" class="text-info">E-mail:</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="text-info">Senha:</label><br>
-                                <input type="text" name="password" id="password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="remember-me" class="text-info"><span>Lembrar senha</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Entrar">
-                            </div>
-                            <div id="register-link" class="text-right">
-                                <a href="/dw/project/main/cadastro/cadastro.html" class="text-info">Registrar</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class=".roboto-light"><a href="#">Login</a></li>
+                <li><a href="#">Cadastro</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div>
+        <div>
+            <section>
+                <header><h2>Login</h2></header>
+            
+            <div>
+
+                <label for="mail" class="label-visual"> E-mail: </label><br>
+                <input type="email" id="mail">   
+
+            </div>
+            
+            <div class="pass">
+                <label for="password" class="label-visual">Password:</label><br>
+                <input type="password" id="password" name="senha"><br>
+                <input type="checkbox" id="check"> <label for="check">Remember-me</label>
+                <a href="./c.html" id="link-cadastro">Cadastrar</a>
+                <input id=but type="button" value="Entrar" onclick="entrar()">
+
+            
             </div>
         </div>
+
+        <script src="c.js">
+            
+        </script>
+        
+        </section>
     </div>
+
 </body>
 </html>
