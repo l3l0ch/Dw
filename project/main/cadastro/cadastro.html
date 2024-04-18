@@ -1,91 +1,61 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
+    <link href="../cadastro/cadastro-style.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="/dw/project/main/fonts-google.css" rel="stylesheet">
-    <link href="./cadastro-style.css" rel="stylesheet">
 
 
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-
+    <title>Login</title>
 </head>
-
 <body>
-    <div class="nav-bar">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/home/mateus/Documentos/vscode/dw/project/main/login/login.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Cadastro</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-
-    </div>
-
-
-
-    <div id="login">
+   
+    <header class="logo">
+    
+        <a href="./login.html">LOGO</a>
+ 
+    </header>
+    <nav class="navbar">
         <div class="container">
-            <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12">
-                        <form id="login-form" class="form" action="" method="post">
-                            <h3 class="text-center text-info">Cadastro</h3>
-                            <div class="form-group">
-                                <label for="username" class="text-info">Nome Completo:</label><br>
-                                <input type="text" name="name" id="username" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="username" class="text-info">E-mail:</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="text-info">Senha:</label><br>
-                                <input type="text" name="password" id="password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="text-info">Verificar senha:</label><br>
-                                <input type="text" name="password" id="password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="remember-me" class="text-info">
-                                <br>
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Cadastrar">
-                            </div>
-                           
-                        </form>
-                    </div>
-                </div>
-            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class=".roboto-light"><a href="../login/login.html">Login</a></li>
+                <li><a href="../cadastro/cadastro.html">Cadastro</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
+    <br>
+    <form>
+      <div>
+          <div class="form">
+              <section>
+                  <header><h2>Cadastro</h2></header>
+              <div>
+
+                  <label for="mail" class="label-visual"> E-mail: </label><br>
+                  <input type="email" id="mail">   
+
+              </div>
+              
+                  <div class="pass">
+                      <label for="password" class="label-visual">Senha:</label><br>
+                      <input type="password" id="password" name="senha"><br>
+                  </div>
+              <div>
+                      <label for="password" class="label-visual">Confirmar Senha:</label><br>
+                      <input type="password" id="password" name="senha"><br>
+                      <input id=but type="button" value="Cadastrar" onclick="cadastrar()"> 
+              </div>
+            </div>     
+          </section>
+      </div>
+    </form>
 </body>
 </html>
