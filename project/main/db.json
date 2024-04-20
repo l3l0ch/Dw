@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "nome": "admin",
+      "email": "admin@sistema.com",
+      "senha": "admin"
+    },
+    {
+      "nome": "mateus",
+      "email": "mateus@sistema.com",
+      "senha": "mateus"
+    },
+    {
+        "nome": "lucas",
+        "email": "lucas@sistema.com",
+        "senha": "lucas"
+      }
+]
+}
