@@ -107,11 +107,15 @@ function cadastrar(){
         email: email,
         senha: senha,
     }
+    // Configuração das opções para a requisição POST
     const options = {
+    // Método da requisição (neste caso, POST)
         method: 'POST',
+    // Cabeçalhos da requisição, incluindo o tipo de conteúdo esperado (application/json)
         headers: {
             'Content-Type': 'application/json'
         },
+    // Corpo da requisição, contendo os dados do novo usuário convertidos para JSON
         body: JSON.stringify(new_user)
     }
 
@@ -127,7 +131,7 @@ function cadastrar(){
 
     verifica_existencia(email).then((emailExiste) => {
         if (emailExiste == true) {
-            alert(`Email Já Está Cadastrado! ${emailExiste}`);
+            alert(`Email Já Está Cadastrado!`);
             return;
         } else {
             // Se o email não existe, realiza o cadastro
@@ -141,14 +145,38 @@ function cadastrar(){
                 })
                 .then((data) => {
                     console.log('Novo usuário cadastrado com sucesso:', data);
+                    window.location.href = '../login/login.html'
+                    
                 })
                 .catch((error) => {
                     console.error("Erro: ", error);
+                    
                 });
         }
     }).catch((error) => {
         console.error("Erro ao verificar existência de email:", error);
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
