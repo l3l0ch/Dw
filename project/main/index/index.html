@@ -4,10 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
-    <h1>BEM VINDO</h1>
+<body>      
+    <header class="logo">
+        <img src="./icons/person.png">
+        <a href="#">Name Usuário</a>
+ 
+    </header>
+    <!-- <div>
+        <nav class="navbar">
+            <div class="container">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li class=".roboto-light"><a href="../login/login.html">Login</a></li>
+                    <li><a href="../cadastro/cadastro.html">Cadastro</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div> -->
+   
+   
+    <div id="container_a">
+        <div id="box_internal_upload">
+            <input type="file" id="upload">
+            <a><img onclick="action_but()" src="./icons/add_992482.png" id="add_icon"></a>
+            <span id="resu">Arquivos: </span>
+        </div>
+    </div><div id="container_b">
+    <section>
+        <select id="arquivos" size="10" width="200" name="Lista_Arquivos">
 
-    <script scr="../functions.js"></script>
+        </select>
+    </section>
+    </div>
+    <script src="./index.js"></script>
 </body>
 </html>

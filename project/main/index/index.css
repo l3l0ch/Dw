@@ -1,0 +1,75 @@
+div{
+  width: 300px;
+  display: inline-block;
+  
+}
+#container_a{
+  text-align: center;
+  background: red;
+  border-radius: 10px;
+  padding: 10px;
+  
+}
+
+
+
+
+
+
+
+
+
+/* body{
+    background-image: url(./space.jpg);
+    background: rgb(9, 8, 24);
+  
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    color: white;
+
+    
+  }
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#box_upload h3{
+  font-size: 18px;
+}
+#upload{
+  font-size: 12px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+#resu{
+  font-size: 14px;
+  float: left;
+  margin-top: 50px;
+}
+
+#add_icon{
+  float: right;
+  margin-top: 50px;
+  margin-right: 50px;
+  
+}
+div {
+  width: ;
+}
+#container_a{
+  text-align: center;
+  background: red;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 150px;
+  height: 100px;
+  width: 300px;
+}
+#container_b{
+
+} */

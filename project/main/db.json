@@ -11,6 +11,24 @@
       "nome": "may",
       "email": "may@gmail.com",
       "senha": "123"
+    },
+    {
+      "id": "b9f5",
+      "nome": "mateus",
+      "email": "mateus@gmail.com",
+      "senha": "123"
+    },
+    {
+      "id": "69f1",
+      "nome": "lucas",
+      "email": "lucasky@gmail.com",
+      "senha": "123"
+    },
+    {
+      "id": "d6e1",
+      "nome": "novo",
+      "email": "novo@sistema.com",
+      "senha": "123"
     }
   ]
 }

@@ -1,54 +1,8 @@
 const cadastros = [{nome: "admin", email: "admin@sistema.com", senha: "admin"}];
 
-// fetch('http://localhost:3000/users', {
-//   method: 'POST',
-//   headers: {
-//     'Content-Type': 'application/json'
-//   },
-//   body: JSON.stringify({ id: 3, name: 'Bob' })
-// })
-// .then(response => {
-//   if (response.ok) {
-//     console.log('Novo usuário adicionado com sucesso!');
-//     return response.json();
-//   } else {
-//     throw new Error('Falha ao adicionar novo usuário.');
-//   }
-// })
-
-let email = document.getElementById('mail');
-/* Pegando elementos de um banco de dados e imprimindo em uma div html*/
-fetch("http://localhost:3000/users").then((response) => {
-    /* Convverte os dados recebidos em json*/
-    response.json().then((users) => {
-        /* visualiza o banco de dados no console web */
-        console.log(users)
-
-        /* funciona como se fosse um for percorrendo o bando de dados */
-        // users.map((user) => {
-        //     email.innerHTML += `<ul><li>${user.nome} - ${user.email}</li>`;
-        // })
-        
-        for (i in users) {
-            email.innerHTML += `<ul><li>${users[i].nome} - ${users[i].email}</li>`
-        }
-    })
-})
 /* Função que Verifica se existe o email informado no banco de dados */
 function verifica_existencia(email) {
-    // let verificado = false;
-    // fetch('http://localhost:3000/users').then((response) => {
-    //     response.json().then((users) => {
-    //         for (i in users) {
-    //             if (users[i].email == email) {
-    //                 verificado = true;
-    //                 return;
-    //             }
-    //         }
-    //     })
-    // })
-    // return verificado;
-    
+
     return new Promise((resolve, reject) => {
         fetch('http://localhost:3000/users').then((response) => {
             response.json().then((users) => {
@@ -160,12 +114,60 @@ function cadastrar(){
 
 
 
+    
+
+
+    // let verificado = false;
+    // fetch('http://localhost:3000/users').then((response) => {
+    //     response.json().then((users) => {
+    //         for (i in users) {
+    //             if (users[i].email == email) {
+    //                 verificado = true;
+    //                 return;
+    //             }
+    //         }
+    //     })
+    // })
+    // return verificado;
+    
 
 
 
 
+// fetch('http://localhost:3000/users', {
+//   method: 'POST',
+//   headers: {
+//     'Content-Type': 'application/json'
+//   },
+//   body: JSON.stringify({ id: 3, name: 'Bob' })
+// })
+// .then(response => {
+//   if (response.ok) {
+//     console.log('Novo usuário adicionado com sucesso!');
+//     return response.json();
+//   } else {
+//     throw new Error('Falha ao adicionar novo usuário.');
+//   }
+// })
 
+// let email = document.getElementById('mail');
+// /* Pegando elementos de um banco de dados e imprimindo em uma div html*/
+// fetch("http://localhost:3000/users").then((response) => {
+//     /* Convverte os dados recebidos em json*/
+//     response.json().then((users) => {
+//         /* visualiza o banco de dados no console web */
+//         console.log(users)
 
+//         /* funciona como se fosse um for percorrendo o bando de dados */
+//         // users.map((user) => {
+//         //     email.innerHTML += `<ul><li>${user.nome} - ${user.email}</li>`;
+//         // })
+        
+//         for (i in users) {
+//             email.innerHTML += `<ul><li>${users[i].nome} - ${users[i].email}</li>`
+//         }
+//     })
+// })
 
 
 
