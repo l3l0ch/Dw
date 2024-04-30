@@ -10,6 +10,7 @@
     
     
 }
+
 .pokemon {
     /* layout dos cards da lista*/
     margin: 0.5rem;
@@ -29,7 +30,9 @@
     /* não deixa vazar imagem */
     max-width: 100%;
 }
-
+.pokemon:hover{
+    font-size: 22px;
+}
 .normal{
     background-color: #a6a87791;}
 .grass{
