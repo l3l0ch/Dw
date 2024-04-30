@@ -24,7 +24,7 @@ function convertPokemonToHtmlLi(pokemon) {
     `
 }     
 const listaPokemonsHtml = document.getElementById('pokemonsList');
-var limit = 5; // limite de elementos por pagina
+var limit = 8; // limite de elementos por pagina
 var offset = 0; // paginação
 
 pokeApi.getPokemons()
@@ -32,27 +32,31 @@ pokeApi.getPokemons()
         // pegando cada elemento de lista e convertando em html li
         // o join ('') troca o separador default da lista por
         // alguma coisa, no caso nada
-        listaPokemonsHtml.innerHTML = pokemonsList.map(convertPokemonToHtmlLi).join('')
+        // listaPokemonsHtml.innerHTML = pokemonsList.map(convertPokemonToHtmlLi).join('')
+        console.log(pokemonsList);
+        for (let i =0; i <pokemonsList.length; i++) {
+            listaPokemonsHtml.innerHTML += convertPokemonToHtmlLi(pokemonsList[i]);
+        }
         // console.log(pokemonsList[0].types[0].type.name)
 
         // console.log(pokemonsList[0].sprites.front_default)
 })
-function loading(){
+function page(){
     const prox_page = pokeApi.getPokemons(offset, limit)
         .then(function (pokemonsList){
-            listaPokemonsHtml.innerHTML += pokemonsList.map(convertPokemonToHtmlLi).join('')
+            listaPokemonsHtml.innerHTML = pokemonsList.map(convertPokemonToHtmlLi).join('')
         
     })
     return prox_page
 }
-
-const max = 151;
+reset()
+const max = 150;
 function load(){
     offset += limit;
     let rec = offset + limit;
     if ( rec > max ){
         limit = 1;
-        loading().then((response) =>{
+        page().then((response) =>{
             const butLoad = document.getElementsByClassName('btn-load')[0];
             butLoad.parentElement.removeChild(butLoad);
             return;
@@ -60,13 +64,26 @@ function load(){
     
     }
     else{
-        loading()
+        page()
     }
         
 }
+function back(){
+    offset -= limit;
+    if (offset < 0){
+        offset = 0;
+        limit = 8;
+    }
+    const prox_page = pokeApi.getPokemons(offset, limit)
+        .then(function (pokemonsList){
+            listaPokemonsHtml.innerHTML = pokemonsList.map(convertPokemonToHtmlLi).join('')
+        })
+    listaPokemonsHtml.innerHTML = prox_page
+}
+
 function reset(){
     offset = 0;
-    limit = 5;
+    limit =8;
     const prox_page = pokeApi.getPokemons(offset, limit)
         .then(function (pokemonsList){
             listaPokemonsHtml.innerHTML = pokemonsList.map(convertPokemonToHtmlLi).join('')

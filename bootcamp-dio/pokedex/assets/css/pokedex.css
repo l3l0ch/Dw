@@ -108,7 +108,8 @@ ol li .types{
     margin: 0;
     list-style: none;
 }
-.btn-load{
+.btn{
+
     box-shadow: 1px 1px 5px black;
     border-radius: 3px;
     padding: 0.5rem 1rem;
@@ -116,19 +117,10 @@ ol li .types{
     font-weight: 400;
 
 }
-.btn-back{
-    box-shadow: 1px 1px 5px black;
-    border-radius: 3px;
-    padding: 0.5rem 1rem;
-    background-color: #769a9c96;
-    font-weight: 400;
 
-}
-.btn-load:hover{
+.btn:hover{
     background-color: rgba(255, 255, 255, 0.575);
-}
-.btn-back:hover{
-    background-color: rgba(255, 255, 255, 0.575);
+    font-size: 20px;
 }
 
 .pagination{
