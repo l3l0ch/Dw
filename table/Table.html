@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+     <style>
+        .tabela,th,td{
+            border: 2px solid rgb(0, 0, 0);
+            text-align: center;
+            color: greenyellow;
+            background-color: black;
+            padding: 0.5rem;
+            text-align: center;
+            margin: auto;
+        }
+        main{
+            text-align: center;
+        }
+     </style>
+</head>
+<body>
+    <main>
+        <h1>IP TABLE</h1>
+
+        <form>
+
+            <span>IP:</span>
+            <input autofocus type="text" placeholder="8.8.8.8" id="address">
+            <span>MASK:</span>
+            <input type="text" placeholder="8.8.8.8" id="mask">
+            <span>VERSION: </span>
+            <input type="text" placeholder="1.0" id="version">
+            <input value="Add" onClick="adicionar()" type="button" id="button">
+            
+        </form>
+        <br><br>
+        <table class="tabela" > <!-- //propriedade border='1' na tag table -->
+            <tr>
+                <thead>
+                    <th>IP</th>
+                    <th>HOST</th>
+                    <th>VERSION</th>
+                </thead>
+                <tbody id="conteudo">
+                    
+                </tbody>
+            </tr>
+        </table>
+    </main>
+
+    <script>
+        let elementos = document.getElementById('conteudo') //tag tr
+        let ip = document.getElementById('address')
+        let mask = document.getElementById('mask')
+        let version = document.getElementById('version')
+     
+        function adicionar () {
+            if (ip.value == '' || mask.value == '' || version.value == ''){
+                alert('está faltando preencher um campo')
+            }
+                else {
+                    elementos.innerHTML += `
+                <tbody id="conteudo">
+                    <tr>
+                        <td>${ip.value}</td>
+                        <td>${mask.value}</td>
+                        <td>${version.value}</td>
+                    </tr>
+                </tbody>
+                `
+                }
+
+                ip.value = ''
+                mask.value = ''
+                version.value = ''         
+        }
+    
+    </script>
+</body>
+</html>
