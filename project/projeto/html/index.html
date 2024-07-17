@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id='pesquisado' type="input" placeholder="mac">
+    <input id="add" value="Add" type="button" onclick="add()">
+    <div id="resultado">
+
+    </div>
+    <script>
+        let conteudo = document.getElementById('resultado')
+        let pesquisado = document.getElementById('pesquisado')
+
+        function add(){
+            fetch('../data/dispositivos.json')
+            .then(function (response) {
+                return(response.json())
+            })
+            .then(function (response) {
+                for(let macs of response){
+                    if (macs.mac == pesquisado.value ){
+                        
+                        conteudo.innerHTML = `<h2>Fabricante</h2>${macs.fabricante}`
+                    }
+                }
+            })
+        }
+
+    
+    </script>
+</body>
+</html>
