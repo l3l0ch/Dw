@@ -64,6 +64,9 @@ body{
     border-radius: 1rem;
     background-color: black;
     color: white;
+    width: 7.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
 }
 #add:hover{
     background-color: rgb(24, 23, 23);
