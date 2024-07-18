@@ -3,31 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="../css/style.css" rel="stylesheet">
     <title>Document</title>
+
 </head>
 <body>
-    <input id='pesquisado' type="input" placeholder="mac">
-    <input id="add" value="Add" type="button" onclick="add()">
-    <div id="resultado">
+    <main>
+        <nav id="lista">
+            <header><h2>MA:CV:EN:DO:RS</h2></header>
+            <ul>
+                <li>Home</li>
+                <li>Login</li>
+                <li>Register</li>
+                <li>Sobre</li>
+            </ul>
+        </nav>
+        <h1>Find MAC Address Vendors. Now.</h1>
 
-    </div>
-    <script>
+        <div id="main">
+            <input autofocus id='pesquisado' type="text" placeholder="Buscar">
+            <input id="add" value="Add" type="button" onclick="add()">
+        </div>
+        <div id="resultados">
+            <div id="resultado"></div>
+        </div>
+
+    </main>
+        <script>
         let conteudo = document.getElementById('resultado')
-        let pesquisado = document.getElementById('pesquisado')
 
+        let pesquisado = document.getElementById('pesquisado')
+       
         function add(){
+            // regex que pega apenas os valores informados retirando os hífens.
+            // busca por ocorrências de hífen globalmente na palavra e troca por ''
+            let novo = pesquisado.value.replace(/-/g,'')
+            console.log(novo)
+
+            let pesquisar = ''
+             // pegando apenas os 6 primeiros valores informados na pesquisa
+            for (let i of novo){
+                if (pesquisar.length == 6){
+                    break;
+                }else{
+                    pesquisar += i
+                }
+            }
+            console.log(pesquisar)
             fetch('../data/dispositivos.json')
             .then(function (response) {
                 return(response.json())
             })
             .then(function (response) {
                 for(let macs of response){
-                    if (macs.mac == pesquisado.value ){
-                        
-                        conteudo.innerHTML = `<h2>Fabricante</h2>${macs.fabricante}`
+                    if (macs.mac == pesquisar ){
+                        console.log(macs.mac == pesquisar)
+                        conteudo.innerHTML = `${macs.fabricante}`
                     }
+                    
                 }
+                
             })
+            pesquisado.value = ''
         }
 
     
