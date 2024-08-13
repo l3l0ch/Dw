@@ -19,9 +19,8 @@ function pesquisar(){
                 <td><button onclick="limpar(this)">X</button></td>
             `;
             pagina.appendChild(row);
-            ip.value = '';
-        }).catch((error) = console.log(error))
-    
+            ip.value = ''
+        })
  }
  function limpar(button) {
     const row = button.parentElement.parentElement;
