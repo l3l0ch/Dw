@@ -1,0 +1,18 @@
+{
+  "name": "Mateu.Santos",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "Web_API_Hello_World.js",
+  "scripts": {
+    "start": "node Web_API_Hello_World.js",
+    "dev": "node --watch Web_API_Hello_World.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
+ 
