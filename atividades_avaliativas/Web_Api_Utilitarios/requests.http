@@ -2,19 +2,25 @@
 GET http://localhost:3000/
 ###
 
-POST http://localhost:3000
+POST http://localhost:3000/text/lowercase
+Content-Type: application/json
+{
+    "input": "Lorem Ipsum"
+}
+###
+POST http://localhost:3000/text/uppercase
 Content-Type: application/json
 
 {
-    "action": "lowercase",
     "input": "Lorem Ipsum"
 }
 ###
 POST http://localhost:3000
-Content-Type: application/json
-
 {
-    "action": "UpperCase",
-    "input": "Lorem Ipsum"
+    "action": "minimum",
+    "input": [
+        "10",
+        "1",
+        "100"
+    ]
 }
-

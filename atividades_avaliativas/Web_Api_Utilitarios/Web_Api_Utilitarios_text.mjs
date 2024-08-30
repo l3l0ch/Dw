@@ -5,38 +5,32 @@ const port = 3000;
 
 app.use(express.json());
 
-const url = '/'
+const url = '/text/:action'
+
 
 app.post(url, (req, res) => {
     
-    const { action, input } = req.body; 
+    const { input } = req.body; 
+    const { action } = req.params;
+    console.log(action)
     console.log(req.body)
 
-    if (action === "lowercase" || action === "UpperCase") {
-        let result;
-        switch (action) {
-            case "lowercase":
-                result = {
-                    "action": `${action}`,
-                    "input": `${input}`,
-                    "output": `${input.toLowerCase()}`
-                };
-                break;
-            case "UpperCase":
-                result = {
-                    "action": `${action}`,
-                    "input": `${input}`,
-                    "output": `${input.toUpperCase()}`
-                };
-                break;
-    
+    let result;
+
+    if (action === "lowercase") {
+        result = {
+                "action": `${action}`,
+                "output": `${input.toLowerCase()}`
+            };
         }
-        res.send(result);    
+    else if (action === "uppercase") {
+        result = {
+            "action": `${action}`,
+            "output": `${input.toUpperCase()}`
+        };
     }
-    else{
-        console.log(`Error: Action - ${action} deve ser {lowercase ou UpperCase}`)
-    }
-});
+    res.json(result);
+})
 
 app.listen(port, () => {
     console.log(`Escutando na porta ${port}`);
