@@ -15,12 +15,8 @@ Content-Type: application/json
     "input": "Lorem Ipsum"
 }
 ###
-POST http://localhost:3000
-{
-    "action": "minimum",
-    "input": [
-        "10",
-        "1",
-        "100"
-    ]
-}
+
+POST http://localhost:3000/number/minimum/?input=10,1,100
+ 
+###
+POST http://localhost:3000/number/maximum/?input=10,1,100
